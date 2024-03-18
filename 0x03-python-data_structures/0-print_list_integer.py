@@ -2,5 +2,5 @@
 if __name__ == "__main__":
     def print_list_integer(my_list=[]):
         for i in my_list:
-            str = "{}"
+            str = "{:d}"
             print(str.format(i))

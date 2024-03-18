@@ -7,4 +7,4 @@ if __name__ == "__main__":
 
     # Printing the sorted list
     for str in sorted_list:
-        print("{}\n".format(str))
+        print("{}".format(str))

@@ -6,4 +6,5 @@ if __name__ == "__main__":
     sorted_list = sorted([item for item in args if not item.startswith('_')])
 
     # Printing the sorted list
-    print(sorted_list)
+    for str in sorted_list:
+        print("{}\n".format(str))

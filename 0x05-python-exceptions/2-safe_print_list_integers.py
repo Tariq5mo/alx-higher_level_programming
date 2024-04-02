@@ -2,8 +2,7 @@
 def safe_print_list_integers(my_list=[], x=0):
     if my_list is None or x is None:
         return 0
-    n = 0
-    i = 0
+    i, n = 0, 0
     rx = int(x)
     rlist = list(my_list)
     while (i < rx):
@@ -13,7 +12,7 @@ def safe_print_list_integers(my_list=[], x=0):
             i = i + 1
         except (ValueError, TypeError):
             i = i + 1
-        except IndexError as e:
+        except IndexError:
             print()
             return n
     print("")

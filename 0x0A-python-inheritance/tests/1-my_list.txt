@@ -65,11 +65,12 @@ Try print_sorted with empty list:
     >>> m.print_sorted()
     []
 
-Try print_sorted return new list:
+print_sorted take a copy not original:
     >>> m = MyList()
-    >>> m.append(1)
-    >>> m.append(2)
+    >>> m.append(5)
+    >>> m.append(4)
     >>> m.append(3)
-    >>> print(m.print_sorted())
-    [1, 2, 3]
-
+    >>> m.print_sorted()
+    [3, 4, 5]
+    >>> m
+    [5, 4, 3]

@@ -11,7 +11,7 @@ class MyList(list):
         '''
         for i in range(0, len(self)):
             self[i] = int(self[i])
-        return sorted(self.copy())
+        print(sorted(self))
 
 
 if __name__ == "__main__":

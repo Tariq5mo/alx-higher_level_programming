@@ -20,7 +20,7 @@ More than one element:
     >>> print(m)
     [1, 2, 3]
 
-Try print_sorted with sorted apppend:
+Try print_sorted with sorted append:
     >>> m = MyList()
     >>> m.append(1)
     >>> m.append(2)
@@ -28,7 +28,7 @@ Try print_sorted with sorted apppend:
     >>> m.print_sorted()
     [1, 2, 3]
 
-Try print_sorted with not sorted apppend:
+Try print_sorted with not sorted append:
     >>> m = MyList()
     >>> m.append(5)
     >>> m.append(3)
@@ -36,7 +36,7 @@ Try print_sorted with not sorted apppend:
     >>> m.print_sorted()
     [3, 5, 6]
 
-Try print_sorted with not sorted apppend content negative numbers:
+Try print_sorted with not sorted append content negative numbers:
     >>> m = MyList()
     >>> m.append(1)
     >>> m.append(-1)
@@ -44,7 +44,7 @@ Try print_sorted with not sorted apppend content negative numbers:
     >>> m.print_sorted()
     [-1, 0, 1]
 
-Try print_sorted with sorted apppend all numbers are negative:
+Try print_sorted with sorted append all numbers are negative:
     >>> m = MyList()
     >>> m.append(-1)
     >>> m.append(-2)
@@ -52,7 +52,7 @@ Try print_sorted with sorted apppend all numbers are negative:
     >>> m.print_sorted()
     [-3, -2, -1]
 
-Try print_sorted with sorted apppend content negative numbers:
+Try print_sorted with sorted append content negative numbers:
     >>> m = MyList()
     >>> m.append(-1)
     >>> m.append(0)
@@ -64,3 +64,12 @@ Try print_sorted with empty list:
     >>> m = MyList()
     >>> m.print_sorted()
     []
+
+Try print_sorted return new list:
+    >>> m = MyList()
+    >>> m.append(1)
+    >>> m.append(2)
+    >>> m.append(3)
+    >>> print(m.print_sorted())
+    [1, 2, 3]
+

@@ -44,6 +44,22 @@ Try print_sorted with not sorted apppend content negative numbers:
     >>> m.print_sorted()
     [-1, 0, 1]
 
+Try print_sorted with sorted apppend all numbers are negative:
+    >>> m = MyList()
+    >>> m.append(-1)
+    >>> m.append(-2)
+    >>> m.append(-3)
+    >>> m.print_sorted()
+    [-3, -2, -1]
+
+Try print_sorted with sorted apppend content negative numbers:
+    >>> m = MyList()
+    >>> m.append(-1)
+    >>> m.append(0)
+    >>> m.append(1)
+    >>> m.print_sorted()
+    [-1, 0, 1]
+
 Try print_sorted with empty list:
     >>> m = MyList()
     >>> m.print_sorted()

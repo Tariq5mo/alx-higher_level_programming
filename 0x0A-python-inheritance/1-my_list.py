@@ -9,6 +9,8 @@ class MyList(list):
         '''
         Prints the list, but sorted (ascending sort).
         '''
+        for i in range(0, len(self)):
+            self[i] = int(self[i])
         print(sorted(self))
 
 

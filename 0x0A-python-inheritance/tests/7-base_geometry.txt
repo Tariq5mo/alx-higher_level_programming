@@ -1,0 +1,48 @@
+Import module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Implement the area() function:
+    >>> a = BaseGeometry()
+    >>> a.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+Implement the integer_validator() function. name is str, value is int and greater than 0:
+    >>> a = BaseGeometry()
+    >>> a.integer_validator("integer", 15)
+
+Implement the integer_validator() function. name is str, value is not int:
+    >>> a = BaseGeometry()
+    >>> a.integer_validator("my_integer", [1, 2, 3])
+    Traceback (most recent call last):
+    ...
+    TypeError: my_integer must be an integer
+
+Implement the integer_validator() function. name is str, value is int in str:
+    >>> a = BaseGeometry()
+    >>> a.integer_validator("my_integer", "15")
+    Traceback (most recent call last):
+    ...
+    TypeError: my_integer must be an integer
+
+Implement the integer_validator() function. name is str, value is int < 0:
+    >>> a = BaseGeometry()
+    >>> a.integer_validator("my_integer", -15)
+    Traceback (most recent call last):
+    ...
+    ValueError: my_integer must be greater than 0
+
+Implement the integer_validator() function. name is str, value is int = 0:
+    >>> a = BaseGeometry()
+    >>> a.integer_validator("my_integer", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: my_integer must be greater than 0
+
+Implement the integer_validator() function. name isn't str, value isn't valid:
+    >>> a = BaseGeometry()
+    >>> a.integer_validator(123, 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: 123 must be greater than 0

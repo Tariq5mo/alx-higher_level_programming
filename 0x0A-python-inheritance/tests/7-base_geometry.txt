@@ -2,6 +2,12 @@ Import module:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Implement the area() function:
+    >>> a = BaseGeometry(15)
+    Traceback (most recent call last):
+    ...
+    TypeError: BaseGeometry() takes no arguments
+    
+Implement the area() function:
     >>> a = BaseGeometry()
     >>> a.area()
     Traceback (most recent call last):
@@ -46,3 +52,4 @@ Implement the integer_validator() function. name isn't str, value isn't valid:
     Traceback (most recent call last):
     ...
     ValueError: 123 must be greater than 0
+

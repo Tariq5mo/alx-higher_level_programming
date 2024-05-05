@@ -54,3 +54,16 @@ Implement the integer_validator() function. name isn't str, value isn't valid:
     ...
     ValueError: 123 must be greater than 0
 
+Implement the integer_validator() function. name NULL, value is valid:
+    >>> a = BaseGeometry()
+    >>> a.integer_validator(NULL, 13)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'NULL' is not defined
+
+Implement the integer_validator() function. name str, value is NULL:
+    >>> a = BaseGeometry()
+    >>> a.integer_validator("Tariq", NULL)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'NULL' is not defined

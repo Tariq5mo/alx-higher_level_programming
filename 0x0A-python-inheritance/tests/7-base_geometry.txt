@@ -67,3 +67,10 @@ Implement the integer_validator() function. name str, value is NULL:
     Traceback (most recent call last):
     ...
     NameError: name 'NULL' is not defined
+
+Implement the integer_validator() function. name str:
+    >>> a = BaseGeometry()
+    >>> a.integer_validator("Tariq")
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'

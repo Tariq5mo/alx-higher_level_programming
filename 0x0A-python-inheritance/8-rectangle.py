@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Task 7.'''
+'''Task 8.'''
 
 
 class BaseGeometry:
@@ -25,6 +25,17 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(str(name)))
 
 
-if __name__ == "__main__":
-    import doctest
-    doctest.testfile("tests/7-base_geometry.txt")
+class Rectangle(BaseGeometry):
+    '''
+    Class for rectangle.
+    '''
+    def __init__(self, width, height):
+        '''
+        Instantiation rectangle with width and height.
+        '''
+        #integer_validator = super().integer_validator
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
+

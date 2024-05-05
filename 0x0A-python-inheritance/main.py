@@ -1,22 +1,49 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+'''Task 8.'''
 
-bg = BaseGeometry()
 
-bg.integer_validator("my_int", 12)
-bg.integer_validator("width", 89)
+class BaseGeometry:
+    '''
+    Base class.
+    '''
+    def __init__(self, name, age):
+        '''init'''
+        self.n = name
+        self.ag = age
 
-try:
-    bg.integer_validator("name", "John")
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    def area(self):
+        '''
+        Raises an Exception with the message area() is not implemented.
+        '''
+        raise Exception("area() is not implemented")
 
-try:
-    bg.integer_validator("age", 0)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    def integer_validator(self, name, value):
+        '''
+        Validates value.
+        Raises:
+            TypeError: if value is not an integer.
+            ValueError: if value is less or equal to 0.
+        '''
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(str(name)))
+        elif value <= 0:
+            raise ValueError("{} must be greater than 0".format(str(name)))
 
-try:
-    bg.integer_validator("distance", -4)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+
+class Rectangle(BaseGeometry):
+    '''
+    Class for rectangle.
+    '''
+    def __init__(self, width, height):
+        '''
+        Instantiation rectangle with width and height.
+        '''
+        self.a = BaseGeometry.integer_validator
+        self.b = self.integer_validator
+        self.c = super().integer_validator
+
+
+cl = Rectangle(15, 16)
+cl.c('good', '78')
+cl.b()
+

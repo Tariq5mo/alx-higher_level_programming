@@ -26,6 +26,13 @@ Implement the integer_validator() function. name is str, value is not int:
     ...
     TypeError: my_integer must be an integer
 
+Implement the integer_validator() function. name is str, value is not int:
+    >>> a = BaseGeometry()
+    >>> a.integer_validator("my_integer", {1, 2, 3})
+    Traceback (most recent call last):
+    ...
+    TypeError: my_integer must be an integer
+
 Implement the integer_validator() function. name is str, value is float:
     >>> a = BaseGeometry()
     >>> a.integer_validator("my_integer", 3.5)

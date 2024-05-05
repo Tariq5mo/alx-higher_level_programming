@@ -89,6 +89,10 @@ Implement the integer_validator() function. name isn't str, value isn't valid:
     ...
     ValueError: 123 must be greater than 0
 
+Implement the integer_validator() function. name isn't str, value is valid:
+    >>> a = BaseGeometry()
+    >>> a.integer_validator(123, 90)
+
 Implement the integer_validator() function. name NULL, value is valid:
     >>> a = BaseGeometry()
     >>> a.integer_validator(NULL, 13)

@@ -2,10 +2,11 @@ Import module:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Implement the area() function:
-    >>> a = BaseGeometry(15)
+    >>> a = BaseGeometry()
+    >>> a.area(15)
     Traceback (most recent call last):
     ...
-    TypeError: BaseGeometry() takes no arguments
+    TypeError: area() takes 1 positional argument but 2 were given
     
 Implement the area() function:
     >>> a = BaseGeometry()

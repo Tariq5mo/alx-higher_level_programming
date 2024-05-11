@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-Student = __import__('10-student').Student
+"""Module for Student class
+"""
 
 
 class Student:
@@ -27,8 +28,6 @@ class Student:
         Returns:
             Dictionary: Dictionary representation of a Student instance.
         """
-        a = "str"
-        self.a = 6
         if type(attrs) is list:
             for i in attrs:
                 if type(i) is not str:
@@ -39,16 +38,3 @@ class Student:
                     d[i] = self.__dict__.get(i)
             return d
         return self.__dict__
-
-m = Student("Tariq", "Omer", 22)
-print(m.a)
-# student_1 = Student("John", "Doe", 23)
-# student_2 = Student("Bob", "Dylan", 27)
-
-# j_student_1 = student_1.to_json()
-# j_student_2 = student_2.to_json(['first_name', 'age'])
-# j_student_3 = student_2.to_json(['middle_name', 'age'])
-
-# print(j_student_1)
-# print(j_student_2)
-# print(j_student_3)

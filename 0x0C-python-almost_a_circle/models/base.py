@@ -14,6 +14,8 @@ class Base:
         Args:
             id (int): The id of the instance. Defaults to None.
         """
+        if type(id) is not int:
+            raise TypeError("id must be an integer")
         if id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects

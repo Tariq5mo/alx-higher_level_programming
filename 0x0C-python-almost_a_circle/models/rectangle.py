@@ -22,7 +22,7 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if type(y) is not int:
             raise TypeError("y must be an integer")
-        if type(id) is not int:
+        if type(id) is not int and id is not None:
             raise TypeError("id must be an integer")
         if width <= 0:
             raise ValueError("width must be > 0")

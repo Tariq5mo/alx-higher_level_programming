@@ -2,8 +2,8 @@
 """Module for class Base.
 """
 import json
-import models.rectangle
-import models.square
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class Base:

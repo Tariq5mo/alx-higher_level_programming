@@ -40,7 +40,7 @@ class Base:
             for obj in list_objs:  # put the dictionaries of instances in a list
                 if isinstance(obj, Base) is False:
                     return
-                ll.append(obj.__dict__)
+                ll.append(obj.to_dictionary())
         json_list = cls.to_json_string(ll)
         json_list = json_list.replace(f"_{cls.__name__}__", '')
         with open(f"{cls.__name__}.json",
@@ -72,7 +72,7 @@ class Base:
             list: Return the list represented by json_string.
         """
         if json_string is None or json_string == '':
-            return []
+            return "[]"
         return list(json.loads(json_string))
 
     @staticmethod

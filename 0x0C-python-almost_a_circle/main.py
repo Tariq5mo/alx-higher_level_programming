@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 """ Check """
-from models.rectangle import Rectangle
+from models.square import Square
 import os
 import json
 
 
-file_path = "Rectangle.json"
+file_path = "Square.json"
 if os.path.exists(file_path):
     os.remove(file_path)
 
-list_objs = None
-expected_list = []
-Rectangle.save_to_file(list_objs)
+list_objs = [Square(2), Square(4, 1), Square(7, 3, 4)]
+expected_list = [i.to_dictionary() for i in list_objs]
+Square.save_to_file(list_objs)
 
 if not os.path.exists(file_path):
     print("save_to_file doesn't create a file {}".format(file_path))

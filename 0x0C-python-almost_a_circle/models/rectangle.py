@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """Module for Rectangle class.
 """
-# from models.base import Base
-import base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -154,7 +153,8 @@ class Rectangle(Base):
     def to_dictionary(self):
         """Returns the dictionary representation of a Rectangle.
         """
-        return {"x": self.__x, 'y': self.__y, "id": self.id, 'height': self.__height, 'width': self.__width}
+        return {"x": self.__x, 'y': self.__y, "id": self.id,
+                'height': self.__height, 'width': self.__width}
 
     def __str__(self):
         """returns [Rectangle] (<id>) <x>/<y> - <width>/<height>.

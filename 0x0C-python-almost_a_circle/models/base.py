@@ -2,8 +2,6 @@
 """Module for class Base.
 """
 import json
-# from models.rectangle import Rectangle
-# from models.square import Square
 
 
 class Base:
@@ -18,11 +16,16 @@ class Base:
         Returns:
             an instance of class.
         """
-        if 'width' in dictionary:
+        from models.rectangle import Rectangle
+        from models.square import Square
+        if cls is Rectangle:
             dummy = Rectangle(10, 10)
-        else:
+        elif cls is Square:
             dummy = Square(10)
-        dummy.update(dictionary)
+        else:
+            dummy = None
+            return
+        dummy.update(**dictionary)
         return dummy
 
     @classmethod

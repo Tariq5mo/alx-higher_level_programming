@@ -37,7 +37,7 @@ class Base:
             with open(f"{cls.__name__}.json", 'w', encoding='utf-8') as f:
                 f.write(json.dumps([]))
         else:
-            for obj in list_objs:  # put the dictionaries of instances in a list
+            for obj in list_objs:  # put the dictionaries of instances in list
                 if isinstance(obj, Base) is False:
                     return
                 ll.append(obj.to_dictionary())

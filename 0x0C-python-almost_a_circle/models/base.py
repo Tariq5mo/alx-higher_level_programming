@@ -32,6 +32,9 @@ class Base:
         Args:
             list_objs (list): A list of instances who inherits of Base.
         """
+        if list_objs is None or list_objs == []:
+            with open(f"{cls.__name__}.json", 'w', encoding='utf-8') as f:
+                f.write(json.dumps([]))
         li = list(list_objs)
         ll = []
         for obj in li:  # put the dictionaries of instances in a list
@@ -39,8 +42,8 @@ class Base:
                 return
             ll.append(obj.__dict__)
         json_list = cls.to_json_string(ll)
-        json_list = json_list.replace(f"_{obj.__class__.__name__}__", '')
-        with open(f"{obj.__class__.__name__}.json",
+        json_list = json_list.replace(f"_{cls.__name__}__", '')
+        with open(f"{cls.__name__}.json",
                   'w', encoding='utf-8') as f:
             f.write(json_list)
 

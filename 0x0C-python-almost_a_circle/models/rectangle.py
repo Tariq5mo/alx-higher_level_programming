@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Module for Rectangle class.
 """
-from models.base import Base
+# from models.base import Base
+import models.base
 
 
 class Rectangle(Base):
@@ -149,6 +150,11 @@ class Rectangle(Base):
                 self.x = kwargs["x"]
             if "y" in kwargs:
                 self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle.
+        """
+        return {"x": self.__x, 'y': self.__y, "id": self.id, 'height': self.__height, 'width': self.__width}
 
     def __str__(self):
         """returns [Rectangle] (<id>) <x>/<y> - <width>/<height>.

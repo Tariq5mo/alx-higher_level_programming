@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """Module for class Square.
 """
-# from models.rectangle import Rectangle
-from .rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -25,7 +24,7 @@ class Square(Rectangle):
 
     def __str__(self):
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
-                                                 self.y, self.height)
+                                                 self.y, self.width)
 
     @property
     def size(self):
@@ -69,3 +68,8 @@ class Square(Rectangle):
                 self.x = kwargs["x"]
             if "y" in kwargs:
                 self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Square.
+        """
+        return {'id': self.id, 'x': self.x, 'size': self.width, 'y': self.y}

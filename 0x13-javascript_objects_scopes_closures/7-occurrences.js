@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/* A function that returns the number of occurrences in a list. t*/
+/* A function that returns the number of occurrences in a list. t */
 exports.nbOccurences = function (list, searchElement) {
   let occ = 0;
   for (let index = 0; index < list.length; index++) {

@@ -5,4 +5,3 @@ exports.logMe = function (item) {
   console.log(`${times}: ${item}`);
   times += 1;
 };
-      

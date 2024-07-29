@@ -12,12 +12,12 @@ module.exports = class Rectangle {
     }
   }
 
-  print () {
+  print (c = 'X') {
     if (this.width > 0 && this.height > 0) {
       let square = '';
       for (let i = 0; i < this.height; i++) {
         for (let j = 0; j < this.width; j++) {
-          square = square + 'X';
+          square = square + c;
         }
         if (i < this.height - 1) {
           square = square + '\n';
@@ -27,14 +27,14 @@ module.exports = class Rectangle {
     }
   }
 
-  rotate () {
-    const temp = this.width;
+  rotate() {
+    let temp = this.width;
     this.width = this.height;
     this.height = temp;
   }
 
-  double () {
+  double() {
     this.width = this.width * 2;
-    this.height = this.height * 2;
+    this.height = this.height *2;
   }
 };

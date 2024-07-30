@@ -10,7 +10,7 @@ if __name__ == "__main__":
     database = args[3]
     con = MySQLdb.connect(host="localhost", port=3306, user=usr,
                           passwd=password, db=database, charset="utf8")
-    com = "SELECT * FROM hbtn_0e_0_usa.states ORDER BY states.id"
+    com = "SELECT * FROM states ORDER BY states.id"
     with con.cursor() as cur:
         cur.execute(com)
         for row in cur.fetchall():

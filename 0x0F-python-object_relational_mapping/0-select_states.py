@@ -14,9 +14,9 @@ cur.execute("SELECT * FROM hbtn_0e_0_usa.states ORDER BY states.id")
 for row in cur.fetchall():
     print(row)
 
-con.commit()
+""" con.commit()
 cur.close()
 con.close()
-
+ """
 if __name__ == "__main__":
     """  """

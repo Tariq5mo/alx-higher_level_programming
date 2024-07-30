@@ -3,21 +3,20 @@
 import sys
 import MySQLdb
 
-args = sys.argv
-usr = args[1]
-password = args[2]
-database = args[3]
-con = MySQLdb.connect(host="localhost", port=3306, user=usr,
-                      passwd=password, db=database)
-com = "SELECT * FROM hbtn_0e_0_usa.states ORDER BY states.id"
-with con.cursor() as cur:
-    cur.execute(com)
-    for row in cur.fetchall():
-        print(row)
-
-""" con.commit()
-cur.close()
-con.close()
- """
 if __name__ == "__main__":
-    """  """
+    args = sys.argv
+    usr = args[1]
+    password = args[2]
+    database = args[3]
+    con = MySQLdb.connect(host="localhost", port=3306, user=usr,
+                          passwd=password, db=database)
+    com = "SELECT * FROM hbtn_0e_0_usa.states ORDER BY states.id"
+    with con.cursor() as cur:
+        cur.execute(com)
+        for row in cur.fetchall():
+            print(row)
+
+    """ con.commit()
+    cur.close()
+    con.close()
+    """

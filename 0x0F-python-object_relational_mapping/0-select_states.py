@@ -16,7 +16,6 @@ if __name__ == "__main__":
         for row in cur.fetchall():
             print(row)
 
-    """ con.commit()
+    con.commit()
     cur.close()
     con.close()
-    """

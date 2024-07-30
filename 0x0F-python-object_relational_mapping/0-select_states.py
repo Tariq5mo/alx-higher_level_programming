@@ -9,7 +9,7 @@ if __name__ == "__main__":
     password = args[2]
     database = args[3]
     con = MySQLdb.connect(host="localhost", port=3306, user=usr,
-                          passwd=password, db=database)
+                          passwd=password, db=database, charset="utf8")
     com = "SELECT * FROM hbtn_0e_0_usa.states ORDER BY states.id"
     with con.cursor() as cur:
         cur.execute(com)

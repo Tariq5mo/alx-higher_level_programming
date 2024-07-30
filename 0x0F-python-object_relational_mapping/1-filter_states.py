@@ -14,8 +14,8 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM `states` ORDER BY `states`.`id`")
     for row in cur.fetchall():
         if row[1][0] == "N":
-            print(row)
+           print(row)
 
-            con.commit()
-            cur.close()
-            con.close()
+    con.commit()
+    cur.close()
+    con.close()

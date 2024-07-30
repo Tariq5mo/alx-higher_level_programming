@@ -12,7 +12,7 @@ con = MySQLdb.connect(host="localhost", port=3306, user=usr,
 cur = con.cursor()
 cur.execute("SELECT * FROM `hbtn_0e_0_usa`.`states` ORDER BY `states`.`id`")
 for row in cur.fetchall():
-    if row[1][0] == 'N':
+    if row[1][0] == "N":
         print(row)
 
 con.commit()

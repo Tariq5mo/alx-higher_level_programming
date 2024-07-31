@@ -17,9 +17,13 @@ if __name__ == "__main__":
     with con.cursor() as cur:
         cur.execute("""SELECT `cities`.`name`
                     FROM `cities` INNER JOIN `states` ON
-                    `cities`.`state_id` = `states`.`id` WHERE `states`.`name` = "{}" ORDER BY `cities`.`id`;""".format(args[4]))
-        for row in cur.fetchall():
-            print(row)
+                    `cities`.`state_id` = `states`.`id` WHERE
+                    `states`.`name` = "{}" ORDER BY
+                    `cities`.`id`;""".format(args[4]))
+        li = []
+        for row in list(cur.fetchall()):
+            li.append(str(*row))
+        print(", ".join(li))
         con.commit()
 
     con.close()

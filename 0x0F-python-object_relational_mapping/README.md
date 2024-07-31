@@ -2,7 +2,7 @@
 
 In the first part of this project, we used the module MySQLdb to connect to a MySQL database and execute your SQL queries.
 
-In the second part of this project, you used the module SQLAlchemy, an Object Relational Mapper (ORM).
+In the second part of this project, we used the module SQLAlchemy, an Object Relational Mapper (ORM).
 
 We learnt:
 

@@ -16,7 +16,6 @@ ORDER BY states.id""".format(args[4])
         cur.execute(com)
         for row in cur.fetchall():
             print(row)
+        con.commit()
 
-    con.commit()
-    cur.close()
     con.close()

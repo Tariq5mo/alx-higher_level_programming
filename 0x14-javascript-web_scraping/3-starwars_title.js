@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /* Script that display the status code of a GET request. */
-const request = require("request");
+const request = require('request');
 
 request.get(
   `https://swapi-api.alx-tools.com/api/films/${process.argv[2]}`,
@@ -8,8 +8,8 @@ request.get(
     if (err) {
       console.log(err);
     } else {
-      ti = JSON.parse(body.toString());
-      console.log(ti["title"]);
+      const ti = JSON.parse(body.toString());
+      console.log(ti.title);
     }
   }
 );

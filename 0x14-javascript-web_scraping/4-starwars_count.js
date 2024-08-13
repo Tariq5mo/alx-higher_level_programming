@@ -4,7 +4,7 @@ const request = require('request');
 
 request.get(process.argv[2], (err, res, body) => {
   if (err) {
-    console.log(err);
+    return console.log(err);
   } else {
     let i = 0;
     const ti = JSON.parse(body.toString());

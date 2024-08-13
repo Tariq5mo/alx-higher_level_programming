@@ -23,5 +23,10 @@ request.get(process.argv[2], (err, res, body) => {
       }
     }
   }
+  for (let key in di) {
+    if (di[key] === 0) {
+      delete di[key];
+    }
+  }
   console.log(di);
 });

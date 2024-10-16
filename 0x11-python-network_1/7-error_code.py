@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """Takes in a URL, sends a request to the URL
 and displays the body of the response.
 If the HTTP status code is greater than or equal to 400,

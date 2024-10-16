@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """a Python script that manage urllib.error.HTTPError exceptions
 and print: Error code: followed by the HTTP status code
 """

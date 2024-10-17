@@ -8,5 +8,5 @@ import requests
 if __name__ == "__main__":
     url = argv[1]
     email = argv[2]
-    with requests.post(url, data={"email": email} ) as resp:
+    with requests.post(url, data={"email": email}) as resp:
         print(resp.text)

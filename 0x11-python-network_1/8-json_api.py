@@ -2,13 +2,14 @@
 """takes in a letter and sends a POST request to
 http://0.0.0.0:5000/search_user with the letter as a parameter.
 """
-import sys, requests
+from sys import argv
+from requests import post
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
+    if len(argv) < 2:
         q = ""
     else:
-        q = {"q": sys.argv[1]}
-    resp = requests.post("http://0.0.0.0:5000/search_user", data=q)
+        q = {"q": argv[1]}
+    resp = post("http://0.0.0.0:5000/search_user", data=q)
     try:
         j = resp.json()
         if len(j) == 0:

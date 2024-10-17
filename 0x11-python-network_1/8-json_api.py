@@ -8,7 +8,7 @@ if __name__ == "__main__":
         q = ""
     else:
         q = sys.argv[1]
-    resp = requests.post("http://0.0.0.0:5000/search_user", params=q)
+    resp = requests.post("http://0.0.0.0:5000/search_user", data=q)
     try:
         j = resp.json()
         if len(j) == 0:

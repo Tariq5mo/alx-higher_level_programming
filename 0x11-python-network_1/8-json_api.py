@@ -11,6 +11,7 @@ if __name__ == "__main__":
     resp = requests.post("http://0.0.0.0:5000/search_user", data=q)
     try:
         j = resp.json()
+        print(j)
         if len(j) == 0:
             print("No result")
         else:

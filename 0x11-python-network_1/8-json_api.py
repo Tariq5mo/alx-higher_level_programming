@@ -7,7 +7,7 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         q = ""
     else:
-        q = sys.argv[1]
+        q = {"q": sys.argv[1]}
     resp = requests.post("http://0.0.0.0:5000/search_user", data=q)
     try:
         j = resp.json()
